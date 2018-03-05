@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NumerosNaturales</title>
+    <script type="text/javascript">
+        let numero = parseInt(prompt("Introduce un numero mayor que 0"));
+        let posicion = parseInt((prompt("Introduce la posicion del numero")));
+        let numeroAux = numero;
+        let contador = 0;
+        let resto = 0;
+        if(numero.toString().length<posicion){
+            let error = numero.toString().length-posicion;
+            alert("Error : Te has pasado "+error+" posiciones");
+        }else {
+            while(contador<posicion){
+                resto = numeroAux % 10;
+                numeroAux = parseInt(numeroAux / 10);
+                contador++;
+            }
+            alert("La posicion iesima "+posicion+" del numero "+numero+" es "+resto);
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
